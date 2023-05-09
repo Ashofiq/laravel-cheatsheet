@@ -97,6 +97,13 @@ Route::pattern('arg', '[0-9]+')
 Route::get('/', function () {
         //
 })->middleware(['auth', 'other']);
+
+Route::group(['prefix' => 'admin',  'middleware' => 'auth'], function()
+{
+    //All the routes that belongs to the group goes here
+    Route::get('dashboard', function() {} );
+});
+
 ```
 
 ### Named Routes
