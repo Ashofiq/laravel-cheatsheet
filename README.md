@@ -94,7 +94,9 @@ Route::pattern('arg', '[0-9]+')
 ### HTTP Middleware
 ### Assigning Middleware To Routes
 ```
-Route::get('admin/profile', ['middleware' => 'auth
+Route::get('/', function () {
+        //
+})->middleware(['auth', 'other']);
 ```
 
 ### Named Routes
